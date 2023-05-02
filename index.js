@@ -6,6 +6,7 @@ require('ejs')
 require('dotenv').config()
 const port = process.env.PORT 
 const MONGO_URI = process.env.URI
+app.use(bodyParser.urlencoded({extended : true}))
 app.set('view engine','ejs')
 const studentRouter = require('./routes/student_route')
 const staffRouter = require('./routes/staff_route')
